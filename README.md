@@ -10,3 +10,7 @@
 
 ## Inspiration:
 https://projecthub.arduino.cc/tylerpeppy/86bb3eef-23ec-4873-ad3b-86c7c277142f
+
+## Libraries
+
+https://github.com/DiUS/ArduinoTableTennisRadar/blob/master/3rd-party-libs/Multiplex7Seg.zip
