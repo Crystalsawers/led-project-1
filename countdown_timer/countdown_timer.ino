@@ -4,7 +4,7 @@
 SevSeg display;
 
 void setup() {
-  // put your setup code here, to run once:
+  // Setting up the 4-digit, 7-segment display
   byte numDigits = 4;
   byte digitPins[] = { 6, 8, 9, 12 };
   byte segmentPins[] = { 1, 2, 3, 4, 5, 7, 10, 11 };
