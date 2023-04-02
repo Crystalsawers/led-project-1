@@ -4,7 +4,8 @@
 SevSeg display;
 
 int startTimer = 10;
-int endTimer = 0;
+int secDelay = 1000;
+//int endTimer = 0;
 
 void setup() {
   // Setting up the 4-digit, 7-segment display
@@ -14,16 +15,9 @@ void setup() {
   bool resistorsOnSegments = true;
   bool updateWithDelaysIn = true;
   byte hardwareConfig = COMMON_CATHODE;
+
   display.begin(hardwareConfig, numDigits, digitPins, segmentPins, resistorsOnSegments);
   display.setBrightness(100);
-
-  // Serial.begin(9600);
-
-  // pinMode(3, OUTPUT);
-  // pinMode(9, OUTPUT);
-  // pinMode(12, OUTPUT);
-
-  // pinMode(11, OUTPUT);
 }
 
 void loop() {
@@ -38,19 +32,29 @@ void loop() {
 void countdown() {
 
   // have different numbers counting down in a loop from 1 minute
-  
-  display.setNumber(startTimer,4);
-  display.refreshDisplay();
+
+  static unsigned long timer = millis();
+  int deciSeconds = 0;
+
+  if (millis() - timer >= 100) {
+    timer += 100;
+    deciSeconds++;  // 100 milliSeconds is equal to 1 deciSecond
+
+    if (deciSeconds == 10000) {  // Reset to 0 after counting for 1000 seconds.
+      deciSeconds = 0;
+    }
+    display.setNumber(deciSeconds, 4);
+  }
+
+  display.refreshDisplay();  // Must run repeatedly
 }
+
+
 
 /* Function to use IR remote sensor*/
 void remote() {
-
-
 }
 
 /* Function where the buzzer plays after the countdown timer is finished */
 void playATune() {
-
-
 }
