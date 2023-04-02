@@ -8,9 +8,10 @@
 - Piezo Buzzer
 - 4 LEDs (Red, Blue, Green, Yellow)
 
-## Shift Register
+## Shift Register - References
 
 https://docs.arduino.cc/tutorials/communication/guide-to-shift-out
+https://arduino.stackexchange.com/questions/79739/74hc595-to-4-digit-7-segment-using-sevsegshift-library
 
 ## Inspiration:
 https://projecthub.arduino.cc/tylerpeppy/86bb3eef-23ec-4873-ad3b-86c7c277142f
