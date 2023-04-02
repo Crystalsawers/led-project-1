@@ -26,7 +26,7 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
 
-// have different numbers counting down in a loop
+// have different numbers counting down in a loop from 1 minute
   display.setNumber(0, 4);
   display.refreshDisplay();
 }
