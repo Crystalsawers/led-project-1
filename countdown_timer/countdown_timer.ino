@@ -69,6 +69,9 @@ void countdown() {
 /* Function where the buzzer plays after the countdown timer is finished */
 void playATune() {
 
+
+// nokia 3310 ringtone 
+
   buzzerSounds('C', 1);
   buzzerSounds('E', 4);
   buzzerSounds('G', 2);
@@ -122,5 +125,3 @@ void blink() {
     digitalWrite(A0, LOW);
     delay(1000);
 }
-
-// reference: https://www.youtube.com/watch?v=b7yCvvrDPSw
